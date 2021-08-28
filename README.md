@@ -1,5 +1,7 @@
 # Vagrant Cheat Sheet
 
+A collection of vagrant VMs for general purpose use.
+
 ## Creating a VM
 - `vagrant init`           -- Initialize Vagrant with a Vagrantfile and ./.vagrant directory, using no specified base image. Before you can do vagrant up, you'll need to specify a base image in the Vagrantfile.
 - `vagrant init <boxpath>` -- Initialize Vagrant with a specific box. To find a box, go to the [public Vagrant box catalog](https://app.vagrantup.com/boxes/search). When you find one you like, just replace it's name with boxpath. For example, `vagrant init ubuntu/trusty64`.
@@ -31,7 +33,7 @@
 - `vagrant package`               -- packages a running virtualbox env in a reusable box
 
 ## Saving Progress
--`vagrant snapshot save [options] [vm-name] <name>` -- vm-name is often `default`. Allows us to save so that we can rollback at a later time
+- `vagrant snapshot save [options] [vm-name] <name>` -- vm-name is often `default`. Allows rollback at a later time
 
 ## Tips
 - `vagrant -v`                    -- get the vagrant version
