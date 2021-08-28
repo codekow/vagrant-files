@@ -1,5 +1,3 @@
-# Useful Vagrant Files
-
 # Vagrant Cheat Sheet
 
 ## Creating a VM
