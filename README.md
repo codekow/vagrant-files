@@ -1,7 +1,22 @@
 # Vagrant Cheat Sheet
 
-## Quickstart
+## Prereqs
+- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+- [VirtualBox Extension Pack](https://download.virtualbox.org/virtualbox/6.1.26/VirtualBoxSDK-6.1.26-145957.zip)
+- [Vagrant](https://www.vagrantup.com/downloads)
 
+### Mac Prereqs
+```
+brew install \
+  vagrant \
+  virtualbox \
+  virtualbox-extension-pack
+
+brew install \
+  podman
+```
+
+## Quickstart
 ```
 cd general
 
