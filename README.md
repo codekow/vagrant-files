@@ -1,5 +1,14 @@
 # Vagrant Cheat Sheet
 
+## Quickstart
+
+```
+cd general
+
+vagrant up
+vagrant ssh
+```
+
 A collection of vagrant VMs for general purpose use.
 
 ## Creating a VM
