@@ -1,0 +1,26 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  config.vm.define "bastion" do |vm1|
+    vm1.vm.box = "centos/7"
+    vm1.vm.hostname = 'bastion'
+    vm1.vm.network "forwarded_port", id: "ssh", host: 1338, guest: 22
+    vm1.vm.network "public_network", bridge: [
+      "en8: Dell Universal Dock D6000",
+      "en0: Wi-Fi (AirPort)",    
+    ]
+
+    config.vm.provider "virtualbox" do |v, override|
+      v.customize ["modifyvm", :id, "--usbxhci", "on"]
+      v.customize ["modifyvm", :id, "--nested-hw-virt", "on"]
+      v.memory = "4096"
+      v.cpus = 2
+    end
+
+  config.ssh.username = "vagrant"
+  #config.ssh.password = "vagrant"
+
+  end
+end
